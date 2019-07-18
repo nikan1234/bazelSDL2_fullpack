@@ -1,0 +1,74 @@
+cc_library(
+  name = "SDL2image",
+  hdrs = glob(["include/*.h"]),
+  strip_include_prefix = "include",
+  visibility = ["//visibility:public"],
+  deps = [
+    	":SDL2image_impl",
+	":SDL2image_jpeg",
+	":SDL2image_png",
+	":SDL2image_zlib",
+  ],
+)
+
+cc_import(
+  name = "SDL2image_impl",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/SDL2_image.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2image_jpeg",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/libjpeg-9.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2image_png",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/libpng16-16.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2image_zlib",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/zlib1.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_library(
+  name = "SDL2ttf",
+  hdrs = glob(["include/*.h"]),
+  strip_include_prefix = "include",
+  visibility = ["//visibility:public"],
+  deps = [
+    	":SDL2ttf_lib",
+	":SDL2ttf_libfree",
+	":SDL2ttf_zlib",
+  ],
+)
+
+cc_import(
+  name = "SDL2ttf_lib",
+  interface_library = "lib/x64/SDL2_ttf.lib",
+  shared_library = "lib/x64/SDL2_ttf.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2ttf_libfree",
+  interface_library = "lib/x64/SDL2_ttf.lib",
+  shared_library = "lib/x64/libfreetype-6.dll.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2ttf_zlib",
+  interface_library = "lib/x64/SDL2_ttf.lib",
+  shared_library = "lib/x64/zlib1.dll",
+  visibility = ["//visibility:private"],
+)
+
