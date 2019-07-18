@@ -55,6 +55,13 @@ cc_import(
 )
 
 cc_import(
+  name = "SDL2image_impl",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/libwebp-7.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
   name = "SDL2image_jpeg",
   interface_library = "lib/x64/SDL2_image.lib",
   shared_library = "lib/x64/libjpeg-9.dll",
