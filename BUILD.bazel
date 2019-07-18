@@ -1,3 +1,4 @@
+#_____________SDL_2.0.9_____________
 cc_library(
   name = "SDL2",
   hdrs = glob(["include/*.h"]),
@@ -32,6 +33,7 @@ cc_import(
   visibility = ["//visibility:private"],
 )
 
+#_____________SDL_Image_____________
 cc_library(
   name = "SDL2image",
   hdrs = glob(["include/*.h"]),
@@ -73,6 +75,7 @@ cc_import(
   visibility = ["//visibility:private"],
 )
 
+#_____________SDL_TTF_____________
 cc_library(
   name = "SDL2ttf",
   hdrs = glob(["include/*.h"]),
@@ -95,7 +98,7 @@ cc_import(
 cc_import(
   name = "SDL2ttf_libfree",
   interface_library = "lib/x64/SDL2_ttf.lib",
-  shared_library = "lib/x64/libfreetype-6.dll.dll",
+  shared_library = "lib/x64/libfreetype-6.dll",
   visibility = ["//visibility:private"],
 )
 
