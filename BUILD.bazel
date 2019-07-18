@@ -61,7 +61,7 @@ cc_import(
 cc_import(
   name = "SDL2ttf_libfree",
   interface_library = "lib/x64/SDL2_ttf.lib",
-  shared_library = "lib/x64/libfreetype-6.dll.dll",
+  shared_library = "lib/x64/libfreetype-6.dll",
   visibility = ["//visibility:private"],
 )
 
