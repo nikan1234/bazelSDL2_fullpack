@@ -109,3 +109,104 @@ cc_import(
   visibility = ["//visibility:private"],
 )
 
+#_____________SDL_Mixer_____________
+cc_library(
+  name = "SDL2ttf",
+  hdrs = glob(["include/*.h"]),
+  strip_include_prefix = "include",
+  visibility = ["//visibility:public"],
+  deps = [
+    	":SDL2mixer_0", ":SDL2mixer_4",
+    	":SDL2mixer_1",	":SDL2mixer_5",
+    	":SDL2mixer_2", ":SDL2mixer_6",
+    	":SDL2mixer_3",	":SDL2mixer_7",
+	":SDL2mixer_8",
+  ],
+)
+
+cc_import(
+  name = "SDL2mixer_0",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/SDL2_mixer.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_1",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libvorbisfile-3.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_2",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libvorbis-0.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_3",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libopusfile-0.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_4",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libopus-0.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_5",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libogg-0.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_6",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libmpg123-0.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_7",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libmodplug-1.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+cc_import(
+  name = "SDL2mixer_8",
+  interface_library = "lib/x64/SDL2_mixer.lib",
+  shared_library = "lib/x64/libFLAC-8.dll",
+  visibility = ["//visibility:private"],
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
