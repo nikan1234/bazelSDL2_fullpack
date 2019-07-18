@@ -36,7 +36,7 @@ cc_import(
 #_____________SDL_Image_____________
 cc_library(
   name = "SDL2image",
-  hdrs = glob(["include/*.h"]),
+  hdrs = glob(["include/SDL_image.h"]),
   strip_include_prefix = "include",
   visibility = ["//visibility:public"],
   deps = [
@@ -78,7 +78,7 @@ cc_import(
 #_____________SDL_TTF_____________
 cc_library(
   name = "SDL2ttf",
-  hdrs = glob(["include/*.h"]),
+  hdrs = glob(["include/SDL_ttf.h"]),
   strip_include_prefix = "include",
   visibility = ["//visibility:public"],
   deps = [
@@ -112,7 +112,7 @@ cc_import(
 #_____________SDL_Mixer_____________
 cc_library(
   name = "SDL2mixer",
-  hdrs = glob(["include/*.h"]),
+  hdrs = glob(["include/SDL_mixer.h"]),
   strip_include_prefix = "include",
   visibility = ["//visibility:public"],
   deps = [
