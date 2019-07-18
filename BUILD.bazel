@@ -111,7 +111,7 @@ cc_import(
 
 #_____________SDL_Mixer_____________
 cc_library(
-  name = "SDL2ttf",
+  name = "SDL2mixer",
   hdrs = glob(["include/*.h"]),
   strip_include_prefix = "include",
   visibility = ["//visibility:public"],
