@@ -41,6 +41,7 @@ cc_library(
   visibility = ["//visibility:public"],
   deps = [
     	":SDL2image_impl",
+	":SDL2image_webp",
 	":SDL2image_jpeg",
 	":SDL2image_png",
 	":SDL2image_zlib",
@@ -55,7 +56,7 @@ cc_import(
 )
 
 cc_import(
-  name = "SDL2image_impl",
+  name = "SDL2image_webp",
   interface_library = "lib/x64/SDL2_image.lib",
   shared_library = "lib/x64/libwebp-7.dll",
   visibility = ["//visibility:private"],
