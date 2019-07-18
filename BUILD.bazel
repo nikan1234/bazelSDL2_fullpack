@@ -45,6 +45,7 @@ cc_library(
 	":SDL2image_jpeg",
 	":SDL2image_png",
 	":SDL2image_zlib",
+	":SDL2image_tiff",
   ],
 )
 
@@ -66,6 +67,13 @@ cc_import(
   name = "SDL2image_jpeg",
   interface_library = "lib/x64/SDL2_image.lib",
   shared_library = "lib/x64/libjpeg-9.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2image_tiff",
+  interface_library = "lib/x64/SDL2_image.lib",
+  shared_library = "lib/x64/libtiff-5.dll",
   visibility = ["//visibility:private"],
 )
 
