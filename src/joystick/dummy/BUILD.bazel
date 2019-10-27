@@ -1,0 +1,6 @@
+cc_library(
+	name = "dummy",
+	srcs = ["SDL_sysjoystick.c"],
+	deps = ["//:SDL2internal"],
+	visibility = ["//:__subpackages__"],
+)
