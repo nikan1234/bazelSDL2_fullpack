@@ -63,6 +63,8 @@ cc_library(
 	includes = ["include", "src"],
 	srcs = glob(["include/*.h", "src/*.c", "src/*.h"]),
 	deps = [
+		":SDL2impl",
+		":SDL2mainimpl",
 		":SDL2internal",
 		"//src/atomic:atomic",
 		"//src/audio:audio",
