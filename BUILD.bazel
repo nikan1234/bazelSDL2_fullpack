@@ -98,6 +98,19 @@ cc_library(
 	visibility = ["//test:__subpackages__"],
 )
 
+//////////
+cc_import(
+  name = "SDL2impl",
+  interface_library = "lib/x64/SDL2.lib",
+  shared_library = "lib/x64/SDL2.dll",
+  visibility = ["//visibility:private"],
+)
+
+cc_import(
+  name = "SDL2mainimpl",
+  static_library = "lib/x64/SDL2main.lib",
+  visibility = ["//visibility:private"],
+)
 
 #_____________SDL_Image_____________
 cc_library(
