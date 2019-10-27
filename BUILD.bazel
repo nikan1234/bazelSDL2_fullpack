@@ -98,7 +98,6 @@ cc_library(
 	visibility = ["//test:__subpackages__"],
 )
 
-//////////
 cc_import(
   name = "SDL2impl",
   interface_library = "lib/x64/SDL2.lib",
